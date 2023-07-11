@@ -1,0 +1,107 @@
+.clockcontainer{
+
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    min-width: 600px;
+    color: white;
+}
+
+#cadre{
+    stroke: white;
+    transition: all 0.4s ease-in-out;
+
+}
+
+
+#phil {
+    position: absolute;
+    top: 5%;
+    
+    
+}
+
+#phil.active{
+    color: #2E3192;
+}
+
+#phil.active ~ #cadre{
+    stroke: #2E3192;
+    
+}
+
+#pay {
+    position: absolute;
+    top: 43%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+    display: none;
+    
+    
+}
+
+
+
+#pay.active{
+    display: inline;
+    
+}
+
+
+
+
+#tech {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+#tech.active{
+    display: inline;
+}
+
+#tech.active ~ #cadre{
+    
+    stroke: #ffffff;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+#off {
+    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 43%;
+    left: 33%;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    color: #2E3192;
+}
+
+#off.active ~ #cadre{
+    stroke: #2E3192;
+}
+#off.active{
+    display: inline;
+}
+
+
+@media screen and (max-width: 480px) {
+    #pay {
+        /* font-size: 14px; */
+        right: 9%;
+
+        
+        
+    }
+}
