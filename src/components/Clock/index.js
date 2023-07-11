@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { useEffect } from 'react';
 import './Clock.css'
 import { animateScroll as scroll } from 'react-scroll';
-
 import { ClockContainer, ClockNav, ClockShape, ClockSpan, ClockLink } from './CLockElements'
+
 
 const Clock = () => {
     // const pay = document.getElementById('pay')
@@ -22,11 +22,38 @@ const Clock = () => {
             setScrollNav(false)
         }
     }
-
+    const phil = document.getElementById('phil')
+    const pay = document.getElementById('pay')
+    const tech = document.getElementById('tech')
+    const off = document.getElementById('off')
+    
     useEffect(()=> {
         window.addEventListener('scroll', changeNav)
         
+        const observer = new IntersectionObserver ((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    // phil.classList.add('inline');
+                    // pay.classList.add('inline');
+                    // tech.classList.add('inline');
+                    // off.classList.add('inline');
+                    
+                }else {
+                    // Faire disparaitre le texte quand il n'est plus à l'écran
+                    // entry.target.classList.remove('inline'); 
+    
+                }
+    
+            })
+        })
+        
+        const hiddenElements = document.querySelectorAll('#philosophie, #pay-as-you-dev, #techno, #offres');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+
     }, [])
+
+    
 
     const toggleHome = () => {
         scroll.scrollToTop();
@@ -39,7 +66,7 @@ const Clock = () => {
    
 
     
-    <ClockLink  id='phil' to="philosophie" smooth={true} duration={1000} spy={true} exact='true' offset={0} activeClass="active">Philosophie</ClockLink>
+    <ClockLink id='phil' to="philosophie" smooth={true} duration={1000} spy={true} exact='true' offset={0} activeClass="active">Philosophie</ClockLink>
     <ClockLink id='pay' to="pay-as-you-dev" smooth={true} duration={1000} spy={true} exact='true' offset={0} activeClass="active">Pay-as-you-dev</ClockLink>
     <ClockLink id='tech' to="techno" smooth={true} duration={1000} spy={true} exact='true' offset={-80} activeClass="active">Techno</ClockLink>
     <ClockLink id='off' to="offres" smooth={true} duration={1000} spy={true} exact='true' offset={-80} activeClass="active">Offres</ClockLink> 

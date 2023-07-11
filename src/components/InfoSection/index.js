@@ -3,6 +3,7 @@ import {Column2, ImgWrap, InfoContainer, InfoWrapper, InfoRow, Column1, TextWrap
 import './HeroSection.css'
 import { Button } from '../ButtonElement'
 
+
  
  const InfoSection = ({lightBg, id, imgStart, topLine, lightText, Headline, darkText,description, buttonLabel, img, alt, primary, dark, dark2, btnId, direction}) => {
 
@@ -25,10 +26,9 @@ import { Button } from '../ButtonElement'
             })
         })
         
-        const hiddenElementsL = document.querySelectorAll('.hiddenL');
-        hiddenElementsL.forEach((el) => observer.observe(el));
-        const hiddenElementsR = document.querySelectorAll('.hiddenR');
-        hiddenElementsR.forEach((el) => observer.observe(el));
+        const hiddenElements = document.querySelectorAll('.hiddenL, .hiddenR');
+        hiddenElements.forEach((el) => observer.observe(el));
+        
 
     })
 

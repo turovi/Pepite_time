@@ -82,7 +82,7 @@ export const Subtitle = styled.p`
 export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start;
-    /* visibility: hidden; */
+    visibility: hidden;
 `
 
 export const ImgWrap = styled.div`

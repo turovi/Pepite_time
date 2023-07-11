@@ -48,10 +48,10 @@
 
 
 
-#pay.active{
+/* #pay.active{
     display: inline;
     
-}
+} */
 
 
 
@@ -65,9 +65,9 @@
     transition: all 0.4s ease-in-out;
 }
 
-#tech.active{
+/* #tech.active{
     display: inline;
-}
+} */
 
 #tech.active ~ #cadre{
     
@@ -91,10 +91,13 @@
 #off.active ~ #cadre{
     stroke: #2E3192;
 }
-#off.active{
+/* #off.active{
+    display: inline;
+} */
+
+.inline{
     display: inline;
 }
-
 
 @media screen and (max-width: 480px) {
     #pay {
@@ -105,3 +108,6 @@
         
     }
 }
+
+
+
