@@ -2,10 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-react
-react-dom
-react-router-dom
-styles-components
+npm install react --save  
+npm install react-dom --save  
+npm i react-router-dom
+npm install styled-components
 ## Available Scripts
 
 In the project directory, you can run:

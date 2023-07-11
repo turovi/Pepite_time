@@ -1,4 +1,4 @@
- import React from 'react'
+ import React, { useEffect } from 'react'
 import {Column2, ImgWrap, InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Img } from './InfoElements'
 import './HeroSection.css'
 import { Button } from '../ButtonElement'
@@ -6,19 +6,33 @@ import { Button } from '../ButtonElement'
  
  const InfoSection = ({lightBg, id, imgStart, topLine, lightText, Headline, darkText,description, buttonLabel, img, alt, primary, dark, dark2, btnId, direction}) => {
 
-    const observer = new IntersectionObserver ((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting){
-                entry.target.classList.add('show');
-                console.log('c\'est ok')
-            }else {
-                entry.target.classList.remove('show');
-            }
-        })
-    })
     
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver ((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show');
+                    
+    
+                }else {
+                    // Faire disparaitre le texte quand il n'est plus à l'écran
+                    // entry.target.classList.remove('show'); 
+    
+                }
+    
+            })
+        })
+        
+        const hiddenElementsL = document.querySelectorAll('.hiddenL');
+        hiddenElementsL.forEach((el) => observer.observe(el));
+        const hiddenElementsR = document.querySelectorAll('.hiddenR');
+        hiddenElementsR.forEach((el) => observer.observe(el));
+
+    })
+
+    
     
     
    return (
