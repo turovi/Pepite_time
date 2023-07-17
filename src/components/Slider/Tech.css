@@ -168,19 +168,19 @@
   }
 
   .swiper_container {
-    max-width:430px;
+    max-width:380px;
   }
   .swiper-wrapper{
-    max-width: 430px;
+    max-width: 380px;
   }
 }
 @media (max-width: 400px) {
  
   .swiper_container {
-    max-width:350px;
+    max-width:330px;
   }
   .swiper-wrapper{
-    max-width: 350px;
+    max-width: 330px;
   }
 }
 
