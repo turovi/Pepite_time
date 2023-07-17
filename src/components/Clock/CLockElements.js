@@ -4,7 +4,6 @@ import {Link as LinkS} from 'react-scroll'
 
 export const ClockContainer = styled.div`
     visibility: ${({scrollNav})=> (scrollNav ? 'visible':'hidden')};
-    
     position: fixed;
     top: 100px;
     left: 50%;
@@ -16,15 +15,21 @@ export const ClockContainer = styled.div`
     min-height: 200px;
     min-width: 600px;
     color: white;
-    transition: all 0.4s ease-in-out;
-    opacity: 0.3;
+    /* opacity: 0.3; */
     &:hover{
         opacity: 1;
     }
 
+    &:has(#off.active, #phil.active){
+        color: #2E3192;
+    }
+    
+
     @media screen and (max-width: 480px) {
         opacity: 1;
 }
+
+    
 `
 
 export const ClockShape = styled.div`
@@ -48,6 +53,8 @@ export const ClockLink = styled(LinkS)`
         border-bottom:4px solid #FFBB22;
         
     }
+
+    
 `
 
 

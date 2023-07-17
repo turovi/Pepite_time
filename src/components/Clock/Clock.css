@@ -13,68 +13,56 @@
     color: white;
 }
 
+
+
 #cadre{
     stroke: white;
     transition: all 0.4s ease-in-out;
 
 }
 
+#clockHand{
+    position: absolute;
+    top: 34%;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
 
 #phil {
     position: absolute;
     top: 5%;
-    
-    
-}
-
-#phil.active{
-    color: #2E3192;
 }
 
 #phil.active ~ #cadre{
     stroke: #2E3192;
     
 }
+/* #phil.active ~ #clockHand{
+    stroke: #FFBB22;
+    
+} */
+
 
 #pay {
     position: absolute;
     top: 43%;
     right: 8%;
     transform: translate(-50%, -50%);
-    display: none;
-    
-    
+
 }
-
-
-
-/* #pay.active{
-    display: inline;
-    
-} */
-
-
-
 
 #tech {
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
     transition: all 0.4s ease-in-out;
 }
 
-/* #tech.active{
-    display: inline;
-} */
-
-#tech.active ~ #cadre{
-    
+#tech.active ~ #cadre{ 
     stroke: #ffffff;
-    transition: all 0.4s ease-in-out;
 }
-
 
 
 #off {
@@ -83,20 +71,27 @@
     transform: translate(-50%, -50%);
     top: 43%;
     left: 33%;
-    display: none;
     transition: all 0.4s ease-in-out;
-    color: #2E3192;
 }
 
 #off.active ~ #cadre{
     stroke: #2E3192;
 }
-/* #off.active{
-    display: inline;
+
+/* #off.active ~ #clockHand{
+    stroke: #2E3192;
+    color: green;
+    fill: red !important;
+    
 } */
 
-.inline{
+.dNone{
+    display: none;
+}
+
+.isActive{
     display: inline;
+    
 }
 
 @media screen and (max-width: 480px) {

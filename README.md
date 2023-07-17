@@ -6,6 +6,7 @@ npm install react --save
 npm install react-dom --save  
 npm i react-router-dom
 npm install styled-components
+npm i swiper
 ## Available Scripts
 
 In the project directory, you can run:

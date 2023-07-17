@@ -6,6 +6,7 @@ import InfoSection from '../components/InfoSection'
 import Offres from '../components/Offres'
 import Footer from '../components/Footer'
 import Clock from '../components/Clock'
+import Tech from '../components/Slider'
 import { useState } from 'react'
 import { homeObjOne, homeObjTwo, homeObjThree} from '../components/InfoSection/Data'
 
@@ -25,7 +26,8 @@ function Home() {
         <Clock/>
         <InfoSection {...homeObjOne}/>
         <InfoSection {...homeObjTwo}/>
-        <InfoSection {...homeObjThree}/>
+        {/* <InfoSection {...homeObjThree}/> */}
+        <Tech/>
         <Offres/>
         
         <Footer />
