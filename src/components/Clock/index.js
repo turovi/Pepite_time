@@ -84,54 +84,6 @@ const Clock = () => {
   }, []);
 
 
-  // -------------------- SWITCH DEG ------------------------
-  // const deg = '180deg'
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeNav);
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           switch (entry.target.id) {
-  //             case "philosophie":
-  //               deg = '0deg'
-  //               return deg            
-  //               break;
-  //             case "pay-as-you-dev":
-  //               deg = '85deg'
-  //               return deg 
-  //               break;
-  //             case "techno":
-  //               deg = '180deg'
-  //               return deg 
-  //               break;
-  //             case "offres":
-  //               deg = '260deg'
-  //               return deg 
-  //               break;
-  //             default:
-  //               console.log("Section undefined");
-  //           }
-  //         }
-  //       });
-  //     },
-  //     { rootMargin: "0px 0px -400px 0px" }
-  //   );
-
-    
-
-  //   const hiddenElements = document.querySelectorAll(
-  //     "#philosophie, #pay-as-you-dev, #techno, #offres"
-  //   );
-  //   hiddenElements.forEach((el) => observer.observe(el));
-  // }, []);
-
-
-
-
-  //-----------------------------------------------------------
 
   const toggleHome = () => {
     scroll.scrollToTop();
